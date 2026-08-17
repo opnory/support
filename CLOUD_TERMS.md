@@ -277,13 +277,15 @@ Opnory implements reasonable technical and organizational safeguards for Opnory 
 
 ## 17. Vulnerability Reporting
 
-Report security vulnerabilities to:
+Report security vulnerabilities per the [Opnory Security Policy](SECURITY.md):
 
 ```text
 security@opnory.com
 ```
 
-> **[SECURITY.MD TO BE CREATED]** — A formal vulnerability-disclosure process (SECURITY.md) should be established before production use. No bug bounty is currently offered.
+No bug bounty is currently offered.
+
+> **[BUG BOUNTY POLICY TO BE CONFIRMED]**
 
 ---
 

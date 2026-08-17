@@ -40,3 +40,7 @@ The Opnory website footer links to these canonical URLs.
 ## Counsel Review Notes
 
 See each document for `[COUNSEL REVIEW REQUIRED]` and placeholder flags indicating business/legal decisions needed before final release.
+
+## Security
+
+- Vulnerability Disclosure Policy — [SECURITY.md](SECURITY.md)
