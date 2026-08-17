@@ -1,385 +1,348 @@
-# Opnory End User License Agreement
+# Opnory Legal Terms
 
-**Enterprise Software License Agreement**
+**Enterprise Software License and Subscription Terms**
 
 Effective Date: [EFFECTIVE DATE]
-Last Updated: [CURRENT DATE]
+Last Updated: August 17, 2026
 
 **DRAFT FOR LEGAL REVIEW**
 
-This End User License Agreement ("Agreement") governs the licensing and use of Opnory software ("Software") and accompanying documentation ("Documentation"). By installing, accessing, or using the Software, Customer accepts this Agreement. If Customer does not agree, Customer must not use the Software.
+These terms govern the licensing and use of Opnory software ("Software") and the Opnory Cloud hosted service ("Cloud Service"). By installing, accessing, or using the Software or Cloud Service, you accept these terms. If you do not agree, you must not use the Software or Cloud Service.
+
+The provider is **Raell Dottin, offering software and services under the name Opnory**. Opnory is a product/trade name. No LLC, corporation, or registered DBA is claimed.
 
 ---
 
-## 1. Definitions
+## 1. Opnory Editions
 
-| Term | Definition |
-|------|------------|
-| **Agreement** | This End User License Agreement, including all exhibits, schedules, and Order Forms incorporated by reference. |
-| **Opnory** | The enterprise AI-powered IT service desk software product licensed under this Agreement. |
-| **Customer** | The legal entity that has purchased a license to the Software under an Order Form. |
-| **Authorized User** | An individual employee, contractor, or agent of Customer authorized by Customer to access and use the Software on Customer's behalf. |
-| **Software** | The Opnory application, including all executable code, libraries, configuration files, and updates provided under this Agreement. |
-| **Documentation** | User guides, technical documentation, API references, and other written materials provided with the Software. |
-| **Customer Data** | Data, content, and information that Customer or its Authorized Users submit, store, or process through the Software. |
-| **Integration** | A connection between the Software and a Third-Party Service authorized and configured by Customer. |
-| **Third-Party Service** | An external platform, application, or service (e.g., Slack, Microsoft Entra ID, Okta, GitHub, Jira Service Management, ServiceNow, AWS, Google Workspace) that the Software may integrate with. |
-| **Maintenance & Support** | The optional annual program providing updates, security fixes, supported releases, integration maintenance, and technical support. |
-| **Order Form** | A written ordering document (including quotes, statements of work, or similar commercial instruments) referencing this Agreement that specifies the license scope, fees, and Maintenance & Support terms. |
+Opnory is available in two distinct editions with different licensing and service models:
+
+| Edition | Delivery Model | Governing Terms |
+|---------|---------------|-----------------|
+| **Opnory Open Source** | Self-hosted — you download, install, and operate the Software on infrastructure you select and control | **BSD-2-Clause open-source license** (see Section 2) |
+| **Opnory Cloud** | Hosted subscription — Opnory operates the application using third-party cloud infrastructure | **Subscription terms** (see Section 3) |
+
+These editions have different legal relationships, responsibilities, and data-processing practices. The Privacy Policy (PRIVACY.md) describes data handling for each edition separately.
 
 ---
 
-## 2. License Grant
+## 2. Opnory Open Source — BSD-2-Clause License
 
-Subject to Customer's compliance with this Agreement and the applicable Order Form, Opnory grants Customer a **non-exclusive, limited, non-transferable** license to:
+### 2.1 License Grant
 
-- Install and use the Software for Customer's **internal business purposes** only;
-- Permit Authorized Users to access and use the Software on Customer's behalf;
-- Use the Software in accordance with the license scope defined in the applicable Order Form (which may specify metrics such as authorized users, servers, instances, or geographic scope).
+The source code and associated files designated as "Opnory Open Source" are licensed under the **BSD-2-Clause** license (SPDX: `BSD-2-Clause`), also known as the Simplified BSD License or FreeBSD License.
 
-**Opnory is licensed, not sold.** This Agreement conveys no ownership interest in the Software.
+> **[OPEN SOURCE LICENSE TO BE SELECTED]** — The above reflects the intended license. The final license text must be confirmed and an unmodified `LICENSE` file placed in the repository root before any public release as open source. Do not treat this document as the license itself.
 
-The license extends to Customer's employees, contractors, and agents acting within the scope of their relationship with Customer, provided Customer remains responsible for their compliance with this Agreement.
+### 2.2 BSD-2-Clause Summary (Informational)
 
----
+The BSD-2-Clause license permits, among other things:
 
-## 3. Perpetual License
+- Commercial and non-commercial use
+- Modification and creation of derivative works
+- Redistribution in source or binary form
+- Use within proprietary products
 
-Customer's license to the Software is **perpetual** with respect to the version(s) licensed under a valid Order Form, provided Customer remains in compliance with this Agreement. "Perpetual" means:
+**Requirements:** You must retain the original copyright notice, the list of conditions, and the disclaimer in all copies or substantial portions of the Software.
 
-- Customer may continue using the licensed version of the Software indefinitely after the applicable Order Form term ends, provided Customer does not breach this Agreement.
-- **Perpetual does not mean** Customer receives perpetual:
-  - Maintenance & Support;
-  - Updates, patches, or bug fixes;
-  - New releases or feature additions;
-  - Cloud-hosted services or managed infrastructure;
-  - Third-party API access or subscriptions;
-  - Integration compatibility with evolving Third-Party Services.
+**No warranty:** The Software is provided "as is," without warranty of any kind.
 
-Upon expiration or non-renewal of Maintenance & Support, Customer retains the right to operate the last licensed version but is no longer entitled to receive future releases, updates, security fixes, or technical support. Third-Party Services integrated with the Software may independently require active subscriptions or credentials that are outside Opnory's control.
+### 2.3 Precedence of Open-Source License
 
----
+For code distributed under the BSD-2-Clause license, **the BSD-2-Clause license governs and takes precedence** over any conflicting restrictions in this document. This document does not override or limit rights granted by the applicable open-source license.
 
-## 4. Ownership
+### 2.4 What the Open-Source License Does Not Include
 
-**Opnory and its licensors retain all right, title, and interest in and to:**
+The open-source license does **not** automatically grant:
 
-- The Software (including all copies);
-- Source code, algorithms, and product technology;
-- Documentation;
-- Trademarks, trade names, and branding;
-- All intellectual property rights therein.
+- Access to Opnory Cloud (the managed hosted service)
+- Paid technical support, SLAs, or managed operations
+- Managed infrastructure, backups, or disaster recovery
+- Managed upgrades or deployment assistance
+- Commercial support, training, or professional services
+- Rights to use Opnory trademarks, logos, or branding to imply endorsement
+- Rights to represent modified or redistributed versions as official Opnory releases
 
-**Customer retains all right, title, and interest in Customer Data.**
+### 2.5 Self-Hosted Responsibilities
 
-This Agreement does not transfer ownership of any Opnory intellectual property to Customer. Customer acquires only the limited license rights expressly granted herein.
+If you self-host Opnory Open Source, **you are responsible for**:
 
----
+- Selecting, provisioning, and securing infrastructure (servers, VMs, cloud accounts, Kubernetes clusters, etc.)
+- Operating system, container runtime, database, and TLS configuration
+- Credentials, secrets, and key management
+- Backups, disaster recovery, and business continuity
+- Availability, monitoring, and alerting
+- Applying updates, patches, and security fixes
+- Network controls, firewalls, and access policies
+- Integration permissions and third-party credentials
+- Compliance with laws applicable to your deployment and data
 
-## 5. License Restrictions
+Opnory (Raell Dottin) does **not** operate, monitor, back up, secure, or control independently self-hosted deployments. The self-hosted operator assumes all operational risk.
 
-Customer shall not, and shall not permit any Authorized User or third party to:
+### 2.6 Telemetry and External Calls (Self-Hosted)
 
-- Copy the Software except as necessary for authorized use or archival backup;
-- Redistribute, resell, rent, lease, or sublicense the Software;
-- Circumvent, disable, or interfere with license enforcement mechanisms;
-- Remove, alter, or obscure any copyright, trademark, or proprietary notices;
-- Create derivative works based on the Software;
-- Reverse engineer, decompile, or disassemble the Software, **except** to the extent such restriction is prohibited by applicable law (e.g., for interoperability or security vulnerability analysis). Customer will provide Opnory with reasonable advance notice of any such permitted activity.
+> **[SELF-HOSTED TELEMETRY AND EXTERNAL DATA FLOWS TO BE CONFIRMED]**
 
----
+The self-hosted Software may, depending on configuration and implementation, transmit information to external destinations including:
 
-## 6. Authorized Users
+- Configured AI/model providers (for AI features)
+- Configured third-party integrations (Slack, identity providers, ticketing systems, cloud APIs, etc.)
+- Update-check or license-check endpoints (if implemented)
+- Crash reporting or telemetry endpoints (if implemented)
+- Opnory support/diagnostics endpoints (if implemented and enabled)
 
-Customer determines and manages its Authorized Users. Customer is responsible for:
-
-- Provisioning and deprovisioning accounts promptly;
-- Assigning appropriate permissions and roles;
-- Securing administrator access;
-- Protecting credential confidentiality;
-- Ensuring Authorized Users comply with this Agreement.
-
-Customer's obligations under this Agreement extend to all Authorized User activity.
+**Do not assume** that a self-hosted deployment sends no data outside your infrastructure until the actual code behavior is verified. Review the source code and configuration before deploying in environments with strict data-locality requirements.
 
 ---
 
-## 7. Artificial Intelligence Features
+## 3. Opnory Cloud — Subscription Terms
 
-The Software incorporates artificial intelligence systems ("AI Features") that may:
+### 3.1 Subscription Access
 
-- Interpret employee requests and natural-language inputs;
-- Classify and route support requests;
-- Search and retrieve information from Customer knowledge bases and authorized external sources;
-- Generate answers, summaries, and recommendations;
-- Recommend troubleshooting steps and remediation actions;
-- Prepare access requests, role changes, and entitlement workflows;
-- Recommend or initiate approved automation workflows;
-- Assist with authorized Integrations.
+Subject to these terms and an active subscription, Opnory grants you a **limited, non-exclusive, non-transferable right to access and use the Cloud Service** for your internal business purposes during the subscription term.
 
-**AI output is probabilistic and may be incorrect, incomplete, outdated, misinterpreted, or unsuitable for Customer's specific environment.** Customer must not rely on AI-generated output for critical decisions without human review.
+**This is not a perpetual license.** The Cloud Service is provided as a subscription. When the subscription ends, your access to the Cloud Service ends, subject to data export and deletion provisions below.
 
-> **Opnory may recommend, prepare, or initiate actions, but the Customer remains responsible for its authorization policies, approval processes, system configuration, and privileged access decisions.**
+### 3.2 Authorized Users
 
-Customer's identity systems, IAM platforms, access-governance systems, administrators, approval workflows, and policies remain the authoritative source for authorization decisions. Opnory is not a substitute for Customer's authorization authority.
+You may permit your employees, contractors, and agents ("Authorized Users") to access the Cloud Service on your behalf, subject to any seat or usage limits in your subscription plan. You are responsible for:
 
----
+- Provisioning and deprovisioning Authorized User accounts
+- Assigning appropriate roles and permissions
+- Securing administrator access and credentials
+- Authorized User compliance with these terms
 
-## 8. Identity, Access, and Privileged Operations
+### 3.3 Cloud Infrastructure
 
-The Software may integrate with:
+The Cloud Service is operated on **[CLOUD INFRASTRUCTURE PROVIDER TO BE CONFIRMED]** (e.g., AWS, Google Cloud, Azure, or similar). Hosting regions and data residency commitments are **[HOSTING REGIONS / DATA RESIDENCY TO BE CONFIRMED]**.
 
-- Identity providers (e.g., Microsoft Entra ID, Okta);
-- IAM platforms;
-- Access-governance systems;
-- SaaS applications;
-- Cloud services;
-- Source-control platforms;
-- Service-management platforms.
+Opnory may change infrastructure providers or regions with reasonable notice. Such changes do not constitute a material modification of these terms.
 
-**Customer remains solely responsible for:**
+### 3.4 Customer Responsibilities (Cloud)
 
-- Accuracy of identity data synchronized or imported;
-- Role definitions, entitlements, and group memberships;
-- Approval policies and authorization rules;
-- Least-privilege configuration;
-- Administrator permissions and privileged-access review;
-- Sensitive-action review and audit.
+You are responsible for:
 
-Opnory should not be relied upon as an independent substitute for Customer's identity or authorization authority. Customer's policies decide; Opnory assists.
+- Your Authorized Users' activities
+- Accuracy and legality of Customer Data you submit
+- Configuring integrations, access policies, and approval workflows
+- Administrator credentials and privileged-access governance
+- Compliance with laws applicable to your use of the Cloud Service
+- Promptly reporting security incidents related to your account
 
----
+### 3.5 Subscription Lifecycle
 
-## 9. Knowledge and External Information
+| Event | Description |
+|-------|-------------|
+| **Activation** | Access begins upon subscription confirmation and payment (if applicable) |
+| **Renewal** | **[RENEWAL BEHAVIOR TO BE CONFIRMED]** — auto-renewal, manual renewal, or notice periods |
+| **Cancellation** | You may cancel at any time; access continues until the end of the current paid period unless otherwise stated |
+| **Expiration** | Access terminates at the end of the subscription term if not renewed |
+| **Suspension** | Opnory may suspend access for: (a) security threats, (b) material breach, (c) non-payment, or (d) legal requirement |
+| **Termination** | Either party may terminate for uncured material breach with 30 days' written notice. Opnory may terminate immediately for fraud, illegal activity, or security emergency. |
 
-The Software may retrieve and reference:
+### 3.6 Effect of Termination / Expiration
 
-- Customer knowledge-base content, policies, procedures, and documentation;
-- Vendor documentation and approved public information;
-- Information available through authorized Integrations.
+Upon termination or expiration of your Cloud Service subscription:
 
-Customer acknowledges that:
+- Your access to the Cloud Service ceases
+- You may export your Customer Data during the **[POST-TERMINATION EXPORT PERIOD TO BE DEFINED]** window
+- Opnory will delete your Customer Data from production systems within **[POST-TERMINATION DELETION PERIOD TO BE DEFINED]**
+- Backups containing your data will be retained for **[BACKUP RETENTION PERIOD TO BE DEFINED]** and then securely destroyed
+- Sections 2.4, 3.4, 3.6, 4, 5, 6, 7, 8, 9, 10, 11, and 12 survive termination
 
-- External information can change without notice;
-- Third-party information may be inaccurate, incomplete, or outdated;
-- Customer-specific documentation may supersede general vendor guidance;
-- Where product configuration permits, Customer controls which information sources are enabled for its environment.
+### 3.7 Service Changes
 
----
+Opnory may modify the Cloud Service (features, integrations, APIs, UI, performance) over time. Material adverse changes will be communicated with reasonable notice. Continued use after notice constitutes acceptance.
 
-## 10. Third-Party Integrations
+### 3.8 Maintenance and Support
 
-The Software supports Integrations with Third-Party Services. Examples of potential integration categories include (not all may be currently supported):
+Opnory Cloud subscriptions may include support according to the applicable plan. **[SUPPORT TERMS TO BE DEFINED IN ORDER FORM OR PLAN DETAILS]**. Maintenance windows, upgrade schedules, and deprecation policies will be communicated via the service or email.
 
-- Workplace communication: Slack, Microsoft Teams;
-- Identity: Microsoft Entra ID, Okta, Ping Identity;
-- Developer platforms: GitHub, GitLab, Bitbucket;
-- Service management: Jira Service Management, ServiceNow, Zendesk;
-- Cloud infrastructure: AWS, Google Cloud, Microsoft Azure;
-- Productivity: Google Workspace, Microsoft 365.
+### 3.9 Availability
 
-**Each Integration operates under the Third-Party Service's own terms of service.** APIs, functionality, and availability can change. Customer authorizes which Integrations the Software may access. Opnory cannot guarantee uninterrupted availability of independent Third-Party Services.
+Opnory will use commercially reasonable efforts to maintain Cloud Service availability. **[CLOUD SERVICE SLA TO BE DEFINED]** — no uptime guarantee or service-level agreement is provided unless explicitly included in a signed Order Form or enterprise agreement.
+
+### 3.10 Third-Party Integrations
+
+The Cloud Service may integrate with third-party services (Slack, Microsoft Entra ID, Okta, GitHub, Jira, ServiceNow, AWS, Google Workspace, etc.). Each integration operates under its own terms. Opnory cannot guarantee uninterrupted availability of third-party services.
 
 ---
 
-## 11. Customer Data
+## 4. Customer Data Ownership
 
-Customer retains all rights in Customer Data. Customer grants Opnory only the limited, non-exclusive rights necessary to:
+**You retain all rights in your Customer Data** — regardless of edition.
 
-- Operate the Software and deliver its features;
-- Retrieve and process information requested by Authorized Users;
-- Execute authorized Integrations;
-- Provide Maintenance & Support;
-- Maintain security and integrity of the Software;
-- Troubleshoot problems reported by Customer.
+- **Open Source:** Data in your self-hosted deployment remains under your control.
+- **Cloud:** Data processed by the Cloud Service remains yours. Opnory claims no ownership.
 
-Opnory does not acquire ownership of Customer Data. Opnory does not use Customer Data for advertising or profiling. Opnory does not sell Customer Data.
-
-Cross-reference: [Privacy Policy](PRIVACY.md).
-
-> **[AI DATA USE POLICY MUST BE CONFIRMED]** — The treatment of Customer Data in connection with AI model training, fine-tuning, or improvement must be confirmed by Customer's contractual choices and Opnory's architecture before this Agreement is finalized.
+Opnory does not sell Customer Data. Opnory does not use Customer Data for advertising or profiling.
 
 ---
 
-## 12. Confidentiality
+## 5. Artificial Intelligence Features
 
-Each party ("Recipient") agrees to protect the other party's ("Discloser") Confidential Information using no less than reasonable care. "Confidential Information" includes:
+Both editions may incorporate AI features (request interpretation, classification, knowledge retrieval, answer generation, summarization, troubleshooting recommendations, access-request preparation, workflow assistance).
 
-- Customer knowledge bases, policies, and internal documentation;
-- Credentials, API keys, and security configurations;
-- Customer Data;
-- Non-public Opnory technology, architecture, and roadmap;
-- Pricing, commercial terms, and Order Forms;
-- Any information designated as confidential or reasonably understood to be confidential.
+### 5.1 AI Output Disclaimer
 
-**Exclusions:** Information that is (a) independently developed without use of Confidential Information, (b) publicly available without breach, (c) lawfully received from a third party without restriction, or (d) required to be disclosed by law (with prompt notice to the other party where legally permitted).
+AI output is probabilistic and may be incorrect, incomplete, outdated, misinterpreted, or unsuitable for your environment. **Do not rely on AI-generated output for critical decisions without human review.**
 
-> **[COUNSEL REVIEW REQUIRED]** — Enterprise customers may negotiate separate NDAs or MSAs that modify or supersede this section.
+> **Opnory may recommend, prepare, or initiate actions, but you remain responsible for your authorization policies, approval processes, system configuration, and privileged access decisions.**
 
----
+Your identity systems, IAM platforms, access-governance systems, administrators, approval workflows, and policies are the authoritative source for authorization decisions. Opnory is not a substitute for your authorization authority.
 
-## 13. Security Responsibilities
+### 5.2 AI Data Flows by Edition
 
-Opnory and Customer share responsibility for security.
+| Edition | AI Provider Configuration | Data Sent to AI Provider |
+|---------|---------------------------|--------------------------|
+| **Open Source** | You may configure your own model/API provider (depending on implementation) | Determined by your configuration |
+| **Cloud** | Opnory selects and configures AI providers as part of the hosted service | Request context, conversation history, knowledge snippets, integration metadata, identity context |
 
-**Opnory will implement reasonable technical and organizational safeguards** appropriate to the nature of the Software and Customer Data, which may include encryption in transit, access controls, vulnerability management, and incident response procedures.
+### 5.3 AI Provider Commitments
 
-**Customer remains responsible for:**
+> **[AI PROVIDER DATA HANDLING TO BE CONFIRMED]** — The specific model provider(s), their data retention, training exclusion, deletion, residency, and enterprise guarantees must be confirmed before finalizing these terms.
 
-- Secure deployment and configuration of the Software in its environment;
-- Credential management, rotation, and secrets hygiene;
-- Access policies, role assignments, and Integration permissions;
-- Administrator account security and privileged-access governance;
-- Network, firewall, and infrastructure security under Customer's control;
-- Prompt application of security updates provided under Maintenance & Support.
+> **[AI DATA USE POLICY MUST BE CONFIRMED]** — Whether Customer Data is used for model training/fine-tuning by Opnory or its providers must be confirmed by architecture and contract.
 
-Opnory does not claim, and Customer should not rely on representations of, any security certifications (SOC 2, ISO 27001, FedRAMP, HIPAA, PCI, etc.) unless specifically verified and documented in writing. No system can guarantee zero vulnerabilities or perfect security.
+**Recommended policy (not yet a promise):** *Customer Data will not be used by Opnory to train generalized AI models by default.* Implementation and provider contracts must enforce this before the Privacy Policy makes this representation.
 
 ---
 
-## 14. Maintenance & Support
+## 6. Knowledge and External Information
 
-**Maintenance & Support is optional** and must be purchased separately via an Order Form. When active, it may cover:
-
-- Product updates and supported new releases;
-- Bug fixes and security fixes;
-- Integration maintenance and compatibility updates;
-- Technical support (channels, severity levels, and response targets defined in applicable documents);
-- Documentation updates.
-
-Exact obligations, service levels, and exclusions are established by the applicable:
-
-- Order Form;
-- Support agreement;
-- Quote;
-- Statement of work.
-
-> **[SUPPORT TERMS]** — Specific SLAs, response times, support hours, escalation paths, and coverage details are defined in commercial documents, not in this Agreement.
-
-Expiration or non-renewal of Maintenance & Support does **not** terminate Customer's perpetual license to the licensed version of the Software.
+Both editions may retrieve and reference your knowledge-base content, policies, procedures, vendor documentation, and approved public information. You acknowledge that external information can change, third-party information may be inaccurate, and your documentation may supersede general vendor guidance.
 
 ---
 
-## 15. Updates and Versions
+## 7. Confidentiality
 
-Future versions of the Software may:
+Each party protects the other's Confidential Information using reasonable care. Confidential Information includes: customer knowledge bases, credentials, security configurations, Customer Data, non-public Opnory technology/roadmap, pricing, commercial terms, and information designated as confidential or reasonably understood to be confidential.
 
-- Add, modify, or deprecate functionality;
-- Change Integration capabilities or supported Third-Party Services;
-- Respond to security requirements or regulatory changes;
-- Adapt to Third-Party API changes.
+Exclusions: independently developed information, publicly available information, information lawfully received from third parties, and legally compelled disclosures (with notice where permitted).
 
-Ownership of a perpetual licensed version is distinct from entitlement to future versions. Customer's perpetual license covers the version(s) licensed at the time of purchase. Entitlement to subsequent versions requires active Maintenance & Support.
+> **[COUNSEL REVIEW REQUIRED]** — Enterprise customers may negotiate separate NDAs or MSAs.
 
 ---
 
-## 16. Fees and Taxes
+## 8. Security Responsibilities
 
-Commercial fees are specified in the applicable Order Form. Customer is responsible for all applicable taxes (excluding taxes on Opnory's net income). Payment terms are governed by the applicable commercial documents.
+### 8.1 Opnory Cloud
 
----
+Opnory implements reasonable technical and organizational safeguards for the Cloud Service components under its operational control, which may include: encryption in transit (TLS 1.2+), encryption at rest, role-based access controls, vulnerability management, incident detection/response, and regular security assessments.
 
-## 17. Open-Source Software
+Opnory does **not** claim security certifications (SOC 2, ISO 27001, FedRAMP, HIPAA, PCI DSS, etc.) unless independently verified and documented.
 
-The Software may incorporate open-source components. The applicable open-source licenses govern those components. This Agreement does not override any rights granted by open-source licenses. Notices and license texts for included open-source components are available in the Software distribution or Documentation.
+### 8.2 Self-Hosted
 
----
-
-## 18. Feedback
-
-Customer may voluntarily provide feedback, suggestions, or feature requests ("Feedback"). Customer grants Opnory a perpetual, irrevocable, royalty-free license to use, reproduce, modify, and incorporate Feedback into the Software and other Opnory products. This license does not extend to Customer's confidential information, proprietary software, business processes, or intellectual property beyond the Feedback itself.
+The self-hosted operator is responsible for infrastructure and deployment security controls under its control (see Section 2.5). Opnory is responsible for security vulnerabilities in its own application code.
 
 ---
 
-## 19. Warranty
+## 9. Warranty
 
-**SOFTWARE WARRANTY.** Opnory warrants that, for ninety (90) days from delivery, the Software will substantially conform to its Documentation when used as authorized. Opnory's sole obligation and Customer's exclusive remedy for breach is, at Opnory's option, (a) repair or replacement of the Software, or (b) termination of the license and refund of fees paid for the non-conforming version.
+**OPEN SOURCE:** The BSD-2-Clause license includes its own warranty disclaimer. The Software is provided "as is" without warranty of any kind.
 
-**DISCLAIMER.** EXCEPT AS EXPRESSLY WARRANTED ABOVE, THE SOFTWARE AND DOCUMENTATION ARE PROVIDED "AS IS." OPNORY DISCLAIMS ALL OTHER WARRANTIES, EXPRESS, IMPLIED, OR STATUTORY, INCLUDING WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, NON-INFRINGEMENT, AND THOSE ARISING FROM COURSE OF DEALING OR USAGE OF TRADE. OPNORY DOES NOT WARRANT UNINTERRUPTED OR ERROR-FREE OPERATION, COMPATIBILITY WITH ALL THIRD-PARTY SERVICES, OR ACCURACY OF AI-GENERATED OUTPUT.
+**CLOUD SERVICE:** Opnory warrants that the Cloud Service will substantially conform to its documentation when used as authorized. Opnory's sole obligation for breach is to use commercially reasonable efforts to correct the non-conformity, or if not commercially reasonable, to terminate the subscription and refund a pro-rata portion of prepaid fees.
 
-> **[COUNSEL REVIEW REQUIRED]** — Warranty terms materially affect enterprise sales and should be reviewed by counsel before finalization.
+**DISCLAIMER (CLOUD):** EXCEPT AS EXPRESSLY WARRANTED ABOVE, THE CLOUD SERVICE IS PROVIDED "AS IS." OPNORY DISCLAIMS ALL OTHER WARRANTIES, INCLUDING MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, NON-INFRINGEMENT, UNINTERRUPTED OPERATION, AND ACCURACY OF AI-GENERATED OUTPUT.
+
+> **[COUNSEL REVIEW REQUIRED]** — Warranty terms materially affect enterprise sales.
 
 ---
 
-## 20. LIMITATION OF LIABILITY
+## 10. LIMITATION OF LIABILITY
 
 **TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW:**
 
-- **NEITHER PARTY'S AGGREGATE LIABILITY ARISING OUT OF OR RELATED TO THIS AGREEMENT WILL EXCEED [LIABILITY CAP].**
-- **NEITHER PARTY WILL BE LIABLE FOR INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, OR FOR LOSS OF PROFITS, REVENUE, DATA, OR BUSINESS OPPORTUNITY, EVEN IF ADVISED OF THE POSSIBILITY.**
+- NEITHER PARTY'S AGGREGATE LIABILITY WILL EXCEED **[LIABILITY CAP]**.
+- NEITHER PARTY WILL BE LIABLE FOR INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, OR LOSS OF PROFITS, REVENUE, DATA, OR BUSINESS OPPORTUNITY.
 
-The foregoing limitations do not apply to: (a) Customer's payment obligations; (b) either party's confidentiality obligations; (c) indemnification obligations; (d) liability arising from gross negligence, willful misconduct, or fraud; or (e) liabilities that cannot be excluded by applicable law.
+Exclusions: payment obligations, confidentiality obligations, indemnification, gross negligence, willful misconduct, fraud, and liabilities that cannot be excluded by law.
 
-> **[COUNSEL REVIEW REQUIRED]** — Liability limitations must be reviewed by counsel for enforceability in the governing jurisdiction.
-
----
-
-## 21. Indemnification
-
-**Opnory will indemnify Customer** against third-party claims alleging that the Software, as provided by Opnory and used within the scope of this Agreement, infringes a valid patent, copyright, or trademark, provided Customer: (a) promptly notifies Opnory; (b) grants Opnory sole control of defense and settlement; and (c) provides reasonable cooperation. If the Software becomes or is likely to become subject to such a claim, Opnory may, at its option and expense: (i) procure the right for Customer to continue use; (ii) replace or modify the Software to be non-infringing; or (iii) if neither is commercially reasonable, terminate the license and refund a pro-rata portion of fees.
-
-**Customer will indemnify Opnory** against third-party claims arising from: (a) Customer Data; (b) Customer's misuse of the Software beyond the license scope; (c) Customer's violation of Third-Party Service terms; or (d) Customer's authorization policies, approval workflows, or access decisions.
-
-> **[COUNSEL REVIEW REQUIRED]** — Indemnification provisions require counsel review for balance and enforceability.
+> **[COUNSEL REVIEW REQUIRED]** — Liability limitations require counsel review for enforceability.
 
 ---
 
-## 22. Termination
+## 11. Indemnification
 
-**License Termination.** Either party may terminate this Agreement for the other party's uncured material breach upon thirty (30) days' written notice. Upon license termination, Customer must cease use and destroy or return all copies of the Software.
+**Opnory will indemnify you** against third-party claims alleging the Software/Cloud Service (as provided by Opnory and used within scope) infringes a valid patent, copyright, or trademark, provided you: (a) promptly notify Opnory, (b) grant Opnory sole control of defense/settlement, (c) provide reasonable cooperation. Opnory may: (i) procure continued-use rights, (ii) replace/modify to be non-infringing, or (iii) terminate and refund pro-rata fees.
 
-**Maintenance Expiration.** Expiration or non-renewal of Maintenance & Support does **not** by itself terminate a valid perpetual license. Customer may continue operating the licensed version but loses entitlement to updates, support, and future releases.
+**You will indemnify Opnory** against third-party claims arising from: (a) your Customer Data, (b) your misuse beyond license/scope, (c) your violation of third-party integration terms, (d) your authorization policies, approval workflows, or access decisions.
 
-**Effect of Termination.** Sections 1, 3, 4, 5, 11, 12, 19, 20, 21, 22, 23, 24, 25, 26, and 27 survive termination.
-
----
-
-## 23. Export and Sanctions
-
-Customer will comply with all applicable export control laws, sanctions, and trade restrictions (including U.S. EAR, ITAR, and OFAC regulations). Customer represents it is not located in, ordinarily resident in, or a national of any embargoed jurisdiction, and is not a denied party on any restricted-party list. The Software may not be exported, re-exported, or transferred in violation of applicable law.
+> **[COUNSEL REVIEW REQUIRED]** — Indemnification provisions require counsel review.
 
 ---
 
-## 24. Governing Law
+## 12. Export and Sanctions
 
-This Agreement is governed by the laws of **[GOVERNING STATE]**, without regard to conflict-of-laws principles. The parties consent to the exclusive jurisdiction of the state and federal courts in **[GOVERNING COUNTY]**.
-
-> **[DISPUTE RESOLUTION APPROACH REQUIRES BUSINESS DECISION AND COUNSEL REVIEW]** — Mandatory arbitration, class-action waivers, jury waivers, or other dispute-resolution mechanisms are not included by default. The parties should make a deliberate business decision with counsel input.
+You will comply with applicable export control laws, sanctions, and trade restrictions (U.S. EAR, ITAR, OFAC). You represent you are not in an embargoed jurisdiction or on a restricted-party list. The Software/Cloud Service may not be exported in violation of applicable law.
 
 ---
 
-## 25. Order of Precedence
+## 13. Governing Law
 
-In the event of a conflict between this Agreement and other documents, the following order of precedence applies (highest to lowest):
+These terms are governed by the laws of **[GOVERNING STATE]**, without regard to conflict-of-laws principles. The parties consent to the exclusive jurisdiction of state and federal courts in **[GOVERNING COUNTY]**.
 
-1. Executed Order Form(s);
-2. Master Services Agreement or separately negotiated written agreement (if any);
-3. This EULA;
-4. Documentation;
-5. Website terms or general public-facing terms.
-
-A specifically negotiated written agreement controls over conflicting general terms.
+> **[DISPUTE RESOLUTION APPROACH REQUIRES BUSINESS DECISION AND COUNSEL REVIEW]** — Mandatory arbitration, class-action waivers, jury waivers, or other mechanisms are not included by default. Make a deliberate business decision with counsel input.
 
 ---
 
-## 26. General Provisions
+## 14. Order of Precedence
 
-- **Entire Agreement.** This Agreement and incorporated Order Forms constitute the entire agreement regarding the Software.
-- **Amendments.** Must be in writing and signed by both parties.
-- **Waiver.** Failure to enforce a right does not waive it.
-- **Severability.** Invalid provisions will be severed; the remainder remains enforceable.
-- **Assignment.** Neither party may assign without the other's prior written consent, except to an affiliate or successor in a merger/acquisition (with notice).
-- **Force Majeure.** Neither party is liable for delays due to causes beyond its reasonable control.
-- **Notices.** Written, delivered to the addresses in the Order Form or this Agreement.
+In case of conflict (highest to lowest):
+
+1. Executed Order Form(s) / Enterprise Agreement
+2. These Terms
+3. Documentation
+4. Website terms
 
 ---
 
-## 27. Contact
+## 15. General Provisions
 
-**Opnory**  
+- **Entire Agreement.** These terms and incorporated Order Forms constitute the entire agreement.
+- **Amendments.** Must be in writing, signed by both parties.
+- **Waiver.** Failure to enforce does not waive rights.
+- **Severability.** Invalid provisions are severed; remainder remains enforceable.
+- **Assignment.** Neither party may assign without prior written consent, except to an affiliate or successor in merger/acquisition (with notice).
+- **Force Majeure.** No liability for delays beyond reasonable control.
+- **Notices.** Written, delivered to the email addresses or addresses in the Order Form.
+
+---
+
+## 16. Intellectual Property and Trademarks
+
+- **Copyright/Open Source:** The BSD-2-Clause license governs open-source code rights.
+- **Trademarks:** Opnory trademarks, logos, and branding are owned by Raell Dottin. The open-source license does **not** grant permission to: (a) falsely claim a fork is an official Opnory release, (b) imply endorsement by Opnory, or (c) misuse Opnory trademarks.
+- **Third-Party Components:** Open-source components included in the Software are governed by their respective licenses.
+
+> **[TRADEMARK POLICY TO BE CREATED]** — Formal trademark usage guidelines to be published separately.
+
+---
+
+## 17. Contributions
+
+If the open-source repository accepts third-party contributions, a contribution policy is needed.
+
+> **[CONTRIBUTION POLICY TO BE DECIDED: CLA / DCO / OTHER]** — No policy currently selected. Must be decided before accepting external contributions.
+
+---
+
+## 18. Security Vulnerability Reporting
+
+> **[SECURITY CONTACT TO BE ESTABLISHED: security@opnory.com OR SECURITY.md]** — A vulnerability disclosure channel should be established before production use.
+
+---
+
+## 19. Contact
+
+**Opnory — Raell Dottin**  
 support@opnory.com  
-https://opnory.com  
-[BUSINESS ADDRESS]
+privacy@opnory.com  
+https://opnory.com
+
+> **[COUNSEL REVIEW: determine whether a postal/legal-notice address must be published before final release or commercial launch.]** — The absence of a postal address may not be universally sufficient under all applicable laws, payment-provider requirements, tax requirements, customer contracts, or future jurisdictions.
 
 ---
 
-*End of Opnory End User License Agreement*
+*End of Opnory Legal Terms*

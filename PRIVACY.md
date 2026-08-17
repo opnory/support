@@ -1,284 +1,302 @@
 # Opnory Privacy Policy
 
 Effective Date: [EFFECTIVE DATE]
-Last Updated: [CURRENT DATE]
+Last Updated: August 17, 2026
 
 **DRAFT FOR LEGAL REVIEW**
 
-This Privacy Policy describes how Opnory ("we," "us," or "our") collects, uses, shares, and protects information in connection with the Opnory AI-powered IT service desk software ("Software," "Product," or "Service") and our website at https://opnory.com ("Website").
+This Privacy Policy describes how **Raell Dottin, offering software and services under the name Opnory** ("we," "us," "our") collects, uses, shares, and protects information in connection with:
+
+- **Opnory Open Source** — the self-hosted, BSD-2-Clause-licensed software
+- **Opnory Cloud** — the managed hosted subscription service
+- Our website at https://opnory.com ("Website")
+
+The provider is an individual, not an LLC or corporation. No registered DBA is claimed.
 
 ---
 
-## 1. Scope and Roles
+## 1. Self-Hosted Opnory and Opnory Cloud — Fundamental Distinction
 
-Opnory may process information in different capacities depending on the context:
+**Data processing differs materially between editions.**
 
-### Opnory as Controller (Business Data)
-For information we collect directly in our business capacity, we act as a data controller. This may include:
-- Website inquiries and contact form submissions;
-- Sales and pre-sales communications;
-- Support contacts and correspondence;
-- Administrative account information for Opnory-hosted services;
-- Marketing communications (where consent is obtained).
+### 1.1 Self-Hosted Opnory (Open Source)
 
-### Opnory as Processor (Customer Workspace Data)
-When Customer deploys the Software, Opnory generally processes Customer Workspace Data on behalf of the organizational Customer. In this context, **Customer determines**:
-- Which individuals are Authorized Users;
-- Which knowledge sources, documents, and policies are connected;
-- Which Third-Party Integrations are enabled;
-- Access permissions, roles, and entitlement configurations;
-- Retention and deletion policies for their workspace;
-- Connected applications and data flows.
+When you self-host Opnory Open Source:
 
-> **[CONTROLLER/PROCESSOR ROLE TO BE REVIEWED BY COUNSEL]** — The precise legal classification depends on deployment model, contractual terms, and applicable law. This policy describes anticipated practices; final classification requires counsel review.
+- The deployment runs on infrastructure **you select and control** (your servers, VMs, cloud accounts, Kubernetes clusters, etc.).
+- **You are the operator** and generally responsible for the information stored in that deployment and for your infrastructure configuration.
+- **Opnory (Raell Dottin) does not automatically receive** all data processed by independently self-hosted instances.
+- Opnory does not operate, monitor, back up, or secure your self-hosted infrastructure.
 
----
+**However, do not assume zero data egress.** The self-hosted Software may, depending on your configuration and the implemented code, transmit information to external destinations including:
 
-## 2. Categories of Information
+- Configured AI/model providers (for AI features)
+- Configured third-party integrations (Slack, identity providers, ticketing systems, cloud APIs, etc.)
+- Update-check or license-check endpoints (if implemented)
+- Crash reporting or telemetry endpoints (if implemented)
+- Opnory support/diagnostics endpoints (if implemented and enabled)
 
-We collect only information necessary for the legitimate purposes described in Section 3. Categories are included only where supported by actual or intended operation.
+> **[SELF-HOSTED TELEMETRY AND EXTERNAL DATA FLOWS TO BE CONFIRMED]** — The actual behavior must be verified by inspecting the source code and configuration. Do not rely on this policy as a guarantee of data locality until code verification is complete.
 
-### 2.1 Contact Information
-- Name
-- Work email address
-- Company/organization name
-- Role or title
+Self-hosted operators may deliberately configure integrations that transmit information to independent third parties. Those third parties have their own privacy and contractual practices.
 
-**Source:** Website forms, sales communications, support contacts, account creation.
+### 1.2 Opnory Cloud (Hosted Subscription)
 
-### 2.2 Workplace Identity (Customer Workspace)
-- Slack user identity / workspace identifier
-- User identifier from identity provider (e.g., Microsoft Entra ID objectId, Okta user ID)
-- Group memberships and roles
-- Entitlements and access profiles
+In the Opnory Cloud hosted service, **Opnory operates the application on your behalf** using third-party cloud infrastructure. Accordingly, data necessary to provide the service is processed by Opnory and its authorized service providers.
 
-**Source:** Customer-authorized identity-provider Integrations; Customer-provisioned accounts.  
-**Controlled by:** Customer (Customer configures identity synchronization).
-
-### 2.3 Support Conversations
-- Questions and support requests submitted by Authorized Users
-- Troubleshooting dialogue and diagnostic information
-- Access requests and role/entitlement change requests
-- Feedback and feature requests
-- AI-generated responses and recommendations (ephemeral or stored per Customer configuration)
-
-**Source:** Authorized User interactions with the Software via workplace communication platforms (e.g., Slack) or direct interfaces.
-
-### 2.4 Customer Knowledge
-- Documents, policies, and procedures uploaded or connected by Customer
-- Knowledge-base articles and FAQs
-- Vendor documentation imported by Customer
-- Configuration data and runbooks
-
-**Source:** Customer-authorized knowledge sources (file uploads, Confluence, Notion, SharePoint, Git repositories, web crawls of approved domains).  
-**Controlled by:** Customer (Customer selects and manages connected sources).
-
-### 2.5 Integration Information (When Enabled by Customer)
-Where Customer configures an Integration, the Software may access:
-- Ticket data (Jira Service Management, ServiceNow, Zendesk)
-- Repository metadata (GitHub, GitLab, Bitbucket)
-- Application and resource metadata (AWS, Google Cloud, Azure)
-- Access-request status and approval history
-- Identity and entitlement metadata from IAM platforms
-- SaaS application metadata (Google Workspace, Microsoft 365)
-
-**Source:** Customer-authorized Third-Party Service APIs.  
-**Controlled by:** Customer (Customer enables/disables each Integration and scopes permissions).
-
-### 2.6 Technical and Operational Information
-- IP address (for authentication, fraud prevention, and network routing)
-- Browser type, operating system, device characteristics
-- Timestamps of access and interaction
-- Application logs (errors, performance, feature usage)
-- Security events (failed logins, permission changes, anomalous access)
-- Audit events (administrative actions, configuration changes, data exports)
-
-**Source:** Automated collection during Software operation and Website visits.  
-**Note:** We do not deploy non-essential analytics, advertising trackers, or third-party marketing pixels on the Website as of the Effective Date. See Section 4.
+Opnory acts as a **data processor** for Customer Workspace Data (processing on behalf of the organizational customer/controller), and as a **data controller** for business data directly collected through the Website, account registration, billing, and support interactions.
 
 ---
 
-## 3. Purposes of Processing
+## 2. Roles: Controller vs. Processor
 
-We process information for the following legitimate purposes:
+| Context | Opnory's Role | Customer's Role |
+|---------|---------------|-----------------|
+| **Website inquiries, sales, support contacts, account registration, billing** | Controller | Data subject / Customer |
+| **Opnory Cloud — Customer Workspace Data** (conversations, knowledge, identities, integrations, logs) | Processor | Controller |
+| **Opnory Cloud — Operational/analytics data** generated by Opnory's operation of the service | Controller (joint or independent) | — |
+| **Self-Hosted Opnory** | Generally no role (unless telemetry/support endpoints are configured and used) | Controller / Operator |
 
-| Purpose | Legal Basis (where applicable) |
-|---------|--------------------------------|
-| Providing the Software and its features | Contract performance |
-| Answering support requests and troubleshooting | Contract performance / legitimate interest |
-| Searching and retrieving Customer knowledge | Contract performance |
-| Operating Customer-authorized Integrations | Contract performance |
-| Processing access requests and approval workflows | Contract performance / legitimate interest |
-| Authentication and access control | Contract performance / legal obligation (security) |
-| Security monitoring, intrusion detection, fraud prevention | Legitimate interest / legal obligation |
-| Product support and maintenance (with Customer consent) | Contract performance |
-| Preventing abuse and enforcing terms | Legitimate interest |
-| Improving Software reliability and performance | Legitimate interest |
-| Legal compliance (subpoenas, regulatory requests) | Legal obligation |
-| Communicating with Customers (billing, updates, security notices) | Contract performance / legitimate interest |
-| Responding to Website inquiries | Legitimate interest / consent |
+> **[CONTROLLER/PROCESSOR ROLE TO BE REVIEWED BY COUNSEL]** — Final classification depends on deployment model, contractual terms, and applicable law.
+
+---
+
+## 3. Categories of Information
+
+### 3.1 Business Data (Opnory as Controller)
+Collected directly through the Website, sales, support, and account registration:
+
+- Name, work email, company/organization, role
+- Support correspondence and tickets
+- Billing and payment information (processed by payment provider)
+- Account authentication credentials (hashed)
+
+### 3.2 Opnory Cloud — Customer Workspace Data (Opnory as Processor)
+Processed on behalf of the organizational customer. Categories **where implemented**:
+
+| Category | Examples | Source |
+|----------|----------|--------|
+| **Account & Identity** | Customer admin accounts, authorized user profiles, workplace identities (Slack IDs, Entra ID objectIds, Okta user IDs), group memberships, roles, entitlements | Customer provisioning; configured identity-provider integrations |
+| **Support Conversations** | Questions, requests, troubleshooting dialogue, access/role requests, feedback, AI-generated responses | Authorized User interactions via Slack or direct interfaces |
+| **Customer Knowledge** | Documents, policies, procedures, knowledge-base articles, vendor docs, configuration data, runbooks | Customer-authorized sources (uploads, Confluence, Notion, SharePoint, Git, approved web crawls) |
+| **Integration Data** | Ticket data (Jira, ServiceNow, Zendesk), repository metadata (GitHub, GitLab), cloud resource metadata (AWS, GCP, Azure), IAM/entitlement metadata, SaaS app metadata (Google Workspace, Microsoft 365) | Customer-enabled third-party API integrations |
+| **Operational Logs** | Application logs (errors, performance, feature usage), security events (failed logins, permission changes), audit events (admin actions, config changes, data exports) | Automated collection during Cloud Service operation |
+| **AI Interaction Data** | Prompts, context, retrieved knowledge snippets, generated responses, model provider inputs/outputs | AI feature usage |
+
+**Controlled by:** The organizational customer (provisioning, integrations, retention settings, deletion).
+
+### 3.3 Self-Hosted Opnory — Data Flows (Conditional)
+Only where the operator configures the corresponding feature:
+
+| Feature | Potential External Recipient | Data Transmitted |
+|---------|------------------------------|------------------|
+| AI Features | Configured model provider | Requests, context, knowledge snippets, identity context |
+| Integrations | Slack, Entra ID, Okta, GitHub, Jira, ServiceNow, AWS, Google Workspace, etc. | API requests/responses per integration scope |
+| Update Checks | Opnory update endpoint | Version, instance ID (if implemented) |
+| Telemetry/Crash Reporting | Opnory or third-party endpoint | Crash dumps, usage metrics (if implemented) |
+
+> **[SELF-HOSTED TELEMETRY AND EXTERNAL DATA FLOWS TO BE CONFIRMED]**
+
+### 3.4 Website Technical Data
+- IP address, browser, OS, device characteristics, timestamps, request paths
+- Processed by Cloudflare (DDoS protection, routing) — governed by Cloudflare's privacy policy
+- No non-essential analytics, advertising trackers, or marketing pixels as of the Effective Date
+
+---
+
+## 4. Purposes of Processing
+
+| Purpose | Edition | Legal Basis |
+|---------|---------|-------------|
+| Providing Opnory Cloud Service | Cloud | Contract performance |
+| Operating Customer-configured Integrations | Cloud | Contract performance |
+| Processing support/access requests | Cloud | Contract performance / legitimate interest |
+| Authentication, access control, security | Cloud | Contract performance / legal obligation |
+| AI feature generation | Both (where configured) | Contract performance |
+| Knowledge search/retrieval | Cloud | Contract performance |
+| Website inquiry response | Both | Legitimate interest / consent |
+| Billing, account management | Both | Contract performance |
+| Legal compliance, fraud prevention | Both | Legal obligation / legitimate interest |
+| Service reliability, improvement | Cloud | Legitimate interest |
+| Security monitoring, incident response | Cloud | Legitimate interest / legal obligation |
 
 **We do not** process personal information for advertising, profiling, automated decision-making with legal effects, or selling to third parties.
 
 ---
 
-## 4. Website Privacy
-
-As of the Effective Date, the Opnory Website (https://opnory.com) is a static marketing site deployed to Cloudflare Pages. It:
-
-- Does **not** use Google Analytics, Mixpanel, Amplitude, or similar behavioral analytics;
-- Does **not** deploy advertising trackers, pixels, or retargeting scripts;
-- Does **not** set non-essential cookies;
-- May set essential session cookies if a future interactive feature (e.g., a login portal) is added;
-- Relies on Cloudflare's infrastructure, which may process limited visitor metadata (IP, user agent, request path) for DDoS protection and network routing — this is governed by Cloudflare's privacy policy.
-
-If we add analytics or interactive features in the future, this section will be updated with specific details and, where required, consent mechanisms.
-
----
-
 ## 5. Artificial Intelligence Processing
 
-The Software uses AI systems to deliver core features (see EULA Section 7). When Authorized Users interact with AI Features, relevant context — including the user's request, conversation history, connected knowledge snippets, and integration metadata — is transmitted to the AI model provider to generate responses.
+### 5.1 By Edition
 
-### 5.1 AI Providers
-> **[AI PROVIDER DATA HANDLING TO BE CONFIRMED]** — The specific model provider(s) (e.g., OpenAI, Anthropic, self-hosted models) and their data-handling commitments must be confirmed based on actual architecture and contractual agreements before this policy is finalized.
+| Edition | AI Provider Selection | Data Flow |
+|---------|----------------------|-----------|
+| **Open Source** | Operator configures own provider (if implementation supports) | Operator controls |
+| **Cloud** | Opnory selects/configures providers as part of service | Request context → Opnory → Provider → Response |
 
-### 5.2 Data Sent to AI Providers
-May include:
-- The Authorized User's natural-language request;
-- Relevant conversation context;
-- Retrieved knowledge-base excerpts (limited to what Customer has authorized);
-- Integration metadata necessary to execute the requested action (e.g., ticket ID, repository name);
-- Workplace identity context (user ID, role) for authorization-aware responses.
+### 5.2 Data Sent to AI Providers (Cloud)
+May include: user's natural-language request, conversation context, retrieved knowledge snippets, integration metadata (ticket IDs, repo names), workplace identity context (user ID, role).
 
-### 5.3 Commitments We Do Not Make (Unless Verified)
+### 5.3 Commitments Not Made (Unless Verified)
 We do **not** claim, unless specifically verified and documented:
-- Zero data retention by the AI provider;
-- That Customer Data is excluded from model training;
-- Specific data residency guarantees;
-- Provider-side deletion timelines;
-- Enterprise contractual terms with AI providers.
+- Zero data retention by the AI provider
+- Customer Data excluded from model training
+- Specific data residency guarantees
+- Provider-side deletion timelines
+- Enterprise contractual terms with AI providers
 
-These items require confirmation from the applicable provider agreement and architecture review.
+> **[AI PROVIDER DATA HANDLING TO BE CONFIRMED]**
+> **[AI DATA USE POLICY MUST BE CONFIRMED]**
+
+**Recommended policy (not yet a promise):** *Customer Data will not be used by Opnory to train generalized AI models by default.* Implementation and provider contracts must enforce this before the Privacy Policy makes this representation.
 
 ---
 
 ## 6. Data Sharing and Recipients
 
-We share information only as described below. We do not sell personal information.
-
-> **[CONFIRM COMPANY POLICY: NO SALE OF PERSONAL INFORMATION]** — Confirm organizational intent before making this a definitive public promise.
-
-### Categories of Recipients
+### 6.1 Opnory Cloud — Categories of Recipients
 
 | Recipient Category | Purpose | Example |
 |-------------------|---------|---------|
-| **Infrastructure providers** | Hosting, compute, storage, networking | Cloudflare, AWS, or Customer's own infrastructure (self-hosted deployments) |
-| **AI model providers** | Generating AI responses (see Section 5) | [TO BE CONFIRMED] |
-| **Customer-authorized Integrations** | Executing actions Customer has configured | Slack, Microsoft Entra ID, Okta, GitHub, Jira, ServiceNow, AWS, Google Workspace |
-| **Support and service vendors** | Customer support, incident response, reliability engineering | Contracted vendors under appropriate agreements |
-| **Professional advisers** | Legal, accounting, compliance, security audit | Law firms, auditors, penetration testers |
-| **Authorities** | Complying with legal process, court orders, regulatory demands | Law enforcement, data protection authorities |
-| **Corporate transaction participants** | M&A due diligence, financing, reorganization (under NDA) | Potential acquirers, investors |
+| **Cloud Infrastructure** | Hosting, compute, storage, networking | **[CLOUD INFRASTRUCTURE PROVIDER TO BE CONFIRMED]** |
+| **AI Model Providers** | Generating AI responses | **[TO BE CONFIRMED]** |
+| **Customer-Authorized Integrations** | Executing configured actions | Slack, Entra ID, Okta, GitHub, Jira, ServiceNow, AWS, Google Workspace |
+| **Observability/Logging** | Monitoring, debugging, alerting | **[TO BE CONFIRMED]** |
+| **Email/Delivery** | Transactional email, notifications | **[TO BE CONFIRMED]** |
+| **Support Systems** | Customer support, ticketing | **[TO BE CONFIRMED]** |
+| **Authentication** | Identity, SSO, MFA | **[TO BE CONFIRMED]** |
+| **Error Reporting** | Crash/error aggregation | **[TO BE CONFIRMED]** |
+| **Professional Advisers** | Legal, accounting, security audit | Law firms, auditors, penetration testers |
+| **Authorities** | Legal process, regulatory demands | Law enforcement, data protection authorities |
+| **Corporate Transactions** | M&A, financing (under NDA) | Potential acquirers, investors |
 
-**Subprocessor list:** We do not publish a fixed subprocessor list because the deployment model (self-hosted vs. hosted) and Customer's Integration choices determine actual subprocessors. Customers may request a current subprocessor summary for their deployment.
+### 6.2 Subprocessors
 
----
+> **[SUBPROCESSOR LIST TO BE ESTABLISHED]** — A canonical public subprocessor page or document should be created before production enterprise use. Opnory Cloud will likely rely on subprocessors for cloud hosting, AI inference, logging, monitoring, email, support, authentication, and error reporting.
 
-## 7. Retention
+Customers may request a current subprocessor summary for their deployment.
 
-Retention periods vary by data category, deployment model, and Customer configuration. We do not impose a single universal retention period.
+### 6.3 Self-Hosted
 
-| Data Category | Retention Approach |
-|---------------|-------------------|
-| **Contact / Business Data** | Retained while the business relationship exists and for a reasonable period thereafter for legal, accounting, and relationship-management purposes. |
-| **Customer Workspace Data** | Determined by Customer configuration. Customer controls deletion of conversations, knowledge sources, and integration data. |
-| **Technical / Operational Logs** | Retained for security, debugging, and reliability purposes. Typical windows: 30–90 days for application logs; longer for security/audit logs per Customer or legal requirements. |
-| **AI Interaction Context** | Transient by default (processed per request). Stored only if Customer enables conversation history or audit features. |
+Opnory does not receive self-hosted deployment data unless the operator configures telemetry, support, update-check, or AI-provider endpoints that transmit to Opnory. Third-party integrations configured by the operator transmit data directly to those third parties.
 
-> **[RETENTION SCHEDULE TO BE DEFINED]** — Specific retention periods, automated deletion workflows, and Customer-configurable controls must be defined in product specifications and contractual terms.
+### 6.4 Sale of Personal Information
 
-Upon termination of the Customer relationship, Customer may export or request deletion of Customer Workspace Data per the applicable agreement. Opnory will delete or return Customer Data within a commercially reasonable period after receiving valid instructions, subject to legal hold obligations.
-
----
-
-## 8. Security
-
-We implement reasonable technical and organizational safeguards appropriate to the sensitivity of the information we process. These may include:
-
-- Encryption in transit (TLS 1.2+) for all network communications;
-- Encryption at rest for stored Customer Workspace Data (where applicable to the deployment model);
-- Role-based access controls and principle of least privilege for Opnory personnel;
-- Vulnerability management and patching procedures;
-- Security incident detection and response processes;
-- Regular security assessments (scope and frequency per internal policy).
-
-**We do not claim** any specific security certifications (SOC 2, ISO 27001, FedRAMP, HIPAA, PCI DSS, etc.) unless independently verified and documented in writing. No system can guarantee absolute security or zero vulnerabilities.
-
-Customers are responsible for security configuration within their control (see EULA Section 13).
+> **[CONFIRM COMPANY POLICY: NO SALE OF PERSONAL INFORMATION]** — Confirm organizational intent before making this a definitive public promise. Once adopted, operations must honor it; the FTC stresses that privacy promises must match practice.
 
 ---
 
-## 9. Privacy Rights
+## 7. Data Processing Agreement
 
-Depending on applicable jurisdiction (e.g., GDPR, CCPA/CPRA, other U.S. state laws), individuals may have rights concerning their personal information, including:
-
-- **Access** — Request a copy of personal information we hold;
-- **Correction** — Request correction of inaccurate information;
-- **Deletion** — Request deletion (subject to legal exceptions);
-- **Restriction** — Request restriction of processing;
-- **Objection** — Object to processing based on legitimate interest;
-- **Portability** — Receive data in a structured, commonly used format;
-- **Appeal** — Appeal a denied request.
-
-**Where Opnory processes information as a processor on behalf of a Customer**, individuals should generally direct rights requests to their employer/organization (the controller), which can then instruct Opnory. We will cooperate with Customer's reasonable instructions to facilitate rights fulfillment.
-
-> **Rights are not universal.** Availability depends on jurisdiction, legal basis, and controller/processor role. This section describes potential rights; it does not create rights where none exist under law.
+> **[DPA TO BE DRAFTED BEFORE ENTERPRISE HOSTED PROCESSING REQUIRES IT]** — A Data Processing Agreement will be made available where required for hosted enterprise customers. No executed or finalized DPA exists as of the Effective Date.
 
 ---
 
-## 10. U.S. State Privacy Laws
+## 8. Retention
 
-Several U.S. states have enacted comprehensive privacy laws (California CCPA/CPRA, Virginia VCDPA, Colorado CPA, Connecticut CTDPA, Utah UCPA, and others). We monitor these developments.
+### 8.1 Opnory Cloud
 
-> **[U.S. STATE PRIVACY REVIEW REQUIRED]** — We do not claim to meet any statutory threshold (e.g., revenue, data volume) until verified. We do not implement "Do Not Sell" or "Do Not Share" mechanisms unless required by law and applicable to our business model. Boilerplate language is avoided in favor of accurate, verified disclosures.
+> **[HOSTED DATA RETENTION SCHEDULE TO BE DEFINED]**
 
----
+Retention periods vary by data category and customer configuration. A formal retention schedule will cover at minimum:
 
-## 11. International Data Transfers
+| Data Category | Retention Approach (Placeholder) |
+|---------------|----------------------------------|
+| Customer account information | Active account + [PERIOD] |
+| Conversation/support content | Customer-configurable; default [PERIOD] |
+| Integration data | Customer-configurable; default [PERIOD] |
+| Knowledge indexes/embeddings | Customer-configurable; default [PERIOD] |
+| Application logs | [PERIOD] (e.g., 30–90 days) |
+| Security/audit logs | [PERIOD] (e.g., 1–7 years per legal requirements) |
+| Backups | **[BACKUP RETENTION PERIOD TO BE DEFINED]** |
+| Support correspondence | [PERIOD] |
+| Deleted customer accounts | **[POST-TERMINATION DELETION PERIOD TO BE DEFINED]** |
 
-The Software may be deployed globally. Information may be processed in jurisdictions outside the individual's country of residence.
+Some privacy regimes require either specific periods or criteria used to determine them, rather than "as long as necessary."
 
-> **[INTERNATIONAL DATA TRANSFER MODEL TO BE DETERMINED]** — We have not yet established Standard Contractual Clauses, Binding Corporate Rules, adequacy determinations, or other transfer mechanisms. This requires architecture review (data residency, deployment regions) and counsel input before finalization. Customers with specific data-locality requirements should discuss deployment options with us.
+### 8.2 Self-Hosted
 
----
+The operator controls deletion from their primary systems and backups. **Uninstalling Opnory does not automatically erase databases, backups, logs, or data stored by integrations.** The operator is responsible for its own data lifecycle management.
 
-## 12. Children's Privacy
+### 8.3 Business Data
 
-Opnory is an enterprise/workplace product designed for organizational use by adults in a professional context. It is not directed to children under 16 (or the applicable age of digital consent in any jurisdiction), and we do not knowingly collect personal information from children for personal use. If a Customer's workplace includes individuals below the applicable age threshold (e.g., interns, apprentices), the Customer as controller manages any associated obligations.
-
----
-
-## 13. Changes to This Policy
-
-If we make material changes to this Privacy Policy, we will:
-
-- Post the updated policy on this page with a revised "Last Updated" date;
-- Notify Customers via email (for business relationship changes) or in-product notice (for workspace-impacting changes);
-- Provide a reasonable transition period before materially different data uses take effect.
-
-We will not rely on silent retroactive consent for materially different data uses.
+Retained while the business relationship exists and for a reasonable period thereafter for legal, accounting, and relationship-management purposes.
 
 ---
 
-## 14. Contact
+## 9. Post-Termination Data Handling (Opnory Cloud)
 
-**Privacy Inquiries:**  
-privacy@opnory.com  
-https://opnory.com  
-[BUSINESS ADDRESS]
+Upon Cloud Service subscription termination/expiration:
 
-> **Note:** `privacy@opnory.com` must be configured through email routing if it does not already exist.
+- **Export window:** Customer may export Customer Data for **[POST-TERMINATION EXPORT PERIOD TO BE DEFINED]**
+- **Production deletion:** Opnory will delete Customer Data from production systems within **[POST-TERMINATION DELETION PERIOD TO BE DEFINED]**
+- **Backup destruction:** Backups retained for **[BACKUP RETENTION PERIOD TO BE DEFINED]** then securely destroyed
+- **Legal holds:** Retention may be extended for legal/compliance obligations
+
+---
+
+## 10. Security
+
+### 10.1 Opnory Cloud
+
+Reasonable safeguards may include: TLS 1.2+ encryption in transit, encryption at rest, role-based access controls, least-privilege personnel access, vulnerability management, patching, incident detection/response, regular security assessments.
+
+**No certifications claimed** (SOC 2, ISO 27001, FedRAMP, HIPAA, PCI DSS, etc.) unless independently verified and documented.
+
+### 10.2 Self-Hosted
+
+The operator is responsible for infrastructure security. Opnory is responsible for security vulnerabilities in its application code. See Legal Terms Section 2.5 and 8.
+
+---
+
+## 11. Privacy Rights
+
+Depending on jurisdiction (GDPR, CCPA/CPRA, VCDPA, CPA, CTDPA, UCPA, etc.), individuals may have rights to: access, correction, deletion, restriction, objection, portability, appeal.
+
+**Where Opnory processes as processor (Cloud Workspace Data):** Individuals should generally direct requests to their employer/organization (the controller), which instructs Opnory. Opnory will cooperate with reasonable controller instructions.
+
+> **Rights are not universal.** Availability depends on jurisdiction, legal basis, and controller/processor role.
+
+---
+
+## 12. U.S. State Privacy Laws
+
+> **[U.S. STATE PRIVACY REVIEW REQUIRED]** — We do not claim to meet any statutory threshold until verified. We do not implement "Do Not Sell" or "Do Not Share" mechanisms unless required by law and applicable to our business model. Boilerplate language is avoided in favor of accurate, verified disclosures.
+
+---
+
+## 13. International Data Transfers
+
+### 13.1 Opnory Cloud
+
+> **[INTERNATIONAL DATA TRANSFER MODEL TO BE DETERMINED]** — Hosting regions not yet selected. Transfer mechanisms (SCCs, BCRs, adequacy) to be established before production enterprise use. Customers with data-locality requirements should discuss deployment options.
+
+### 13.2 Self-Hosted
+
+The operator chooses infrastructure locations. Data may leave the operator's jurisdiction only if the operator configures integrations or AI providers that transmit data internationally.
+
+---
+
+## 14. Children's Privacy
+
+Opnory is an enterprise/workplace product for professional use by adults. Not directed to children under 16 (or applicable age of digital consent). No knowing collection from children for personal use. If a customer's workplace includes minors (e.g., interns), the customer as controller manages obligations.
+
+---
+
+## 15. Changes to This Policy
+
+Material changes will be posted with a revised "Last Updated" date. Customers notified via email (business changes) or in-product notice (workspace-impacting changes). Reasonable transition period before materially different data uses take effect. No silent retroactive consent.
+
+---
+
+## 16. Contact
+
+**Privacy Inquiries:** privacy@opnory.com  
+**Support Inquiries:** support@opnory.com  
+**Website:** https://opnory.com
+
+> **Note:** `privacy@opnory.com` and `support@opnory.com` must be configured through email routing if they do not already exist.
+>
+> **[COUNSEL REVIEW: determine whether a postal/legal-notice address must be published before final release or commercial launch.]** — The absence of a postal address may not be universally sufficient under all applicable laws, payment-provider requirements, tax requirements, customer contracts, or future jurisdictions.
 
 ---
 
