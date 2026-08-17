@@ -32,7 +32,7 @@ These editions have different legal relationships, responsibilities, and data-pr
 
 The source code and associated files designated as "Opnory Open Source" are licensed under the **BSD-2-Clause** license (SPDX: `BSD-2-Clause`), also known as the Simplified BSD License or FreeBSD License.
 
-> **[OPEN SOURCE LICENSE TO BE SELECTED]** — The above reflects the intended license. The final license text must be confirmed and an unmodified `LICENSE` file placed in the repository root before any public release as open source. Do not treat this document as the license itself.
+The full license text is in the `LICENSE` file at the repository root.
 
 ### 2.2 BSD-2-Clause Summary (Informational)
 
