@@ -1,13 +1,19 @@
 # Opnory Support Repository
 
-This repository is the **canonical source** for Opnory legal and policy documents.
+This repository is the **canonical source** for Opnory legal, security, and support documents.
 
-## Legal Documents
+## Documents
 
-- **Open Source License** — [LICENSE](LICENSE) (BSD-2-Clause)
-- **Opnory Cloud Terms** — [CLOUD_TERMS.md](CLOUD_TERMS.md)
-- **Privacy Policy** — [PRIVACY.md](PRIVACY.md)
-- **Licensing & Terms Guide** — [EULA.md](EULA.md)
+| Document | Purpose | Status |
+|----------|---------|--------|
+| [LEGAL.md](LEGAL.md) | Navigation to all legal documents | Current |
+| [CLOUD_TERMS.md](CLOUD_TERMS.md) | Opnory Cloud hosted subscription terms | Draft for legal review |
+| [PRIVACY.md](PRIVACY.md) | Privacy and data-processing practices | Draft for legal review |
+| [SECURITY.md](SECURITY.md) | Vulnerability disclosure policy | Operational |
+| [SUPPORT.md](SUPPORT.md) | Support channels and contact guide | Current |
+| [EULA.md](EULA.md) | Legacy EULA redirect | Retained for link compatibility |
+
+> **CLOUD_TERMS.md and PRIVACY.md remain drafts for legal review. The BSD-2-Clause license is adopted (authoritative copy will be in `opnory/opnory`). SECURITY.md is the current vulnerability disclosure policy.**
 
 ## Product Editions
 
@@ -18,29 +24,32 @@ This repository is the **canonical source** for Opnory legal and policy document
 
 The BSD-2-Clause `LICENSE` governs Opnory Open Source. `CLOUD_TERMS.md` governs Opnory Cloud. `PRIVACY.md` describes applicable privacy practices.
 
-All documents are **DRAFT FOR LEGAL REVIEW** and not final legal advice.
+## Canonical Public Documents
 
-## Public URLs
+All documents are publicly accessible at their GitHub URLs:
 
-Once published via GitHub Pages or linked from the Opnory website, the canonical public URLs will be:
-
-- BSD-2-Clause License: `https://github.com/opnory/support/blob/main/LICENSE`
+- Legal Navigation: `https://github.com/opnory/support/blob/main/LEGAL.md`
 - Opnory Cloud Terms: `https://github.com/opnory/support/blob/main/CLOUD_TERMS.md`
 - Privacy Policy: `https://github.com/opnory/support/blob/main/PRIVACY.md`
-- Licensing Guide: `https://github.com/opnory/support/blob/main/EULA.md`
+- Security Policy: `https://github.com/opnory/support/blob/main/SECURITY.md`
+- Support Guide: `https://github.com/opnory/support/blob/main/SUPPORT.md`
+- Legacy EULA Redirect: `https://github.com/opnory/support/blob/main/EULA.md`
 
 The Opnory website footer links to these canonical URLs.
+
+## Reference License Copy
+
+A reference copy of the BSD-2-Clause license (authoritative copy will be in `opnory/opnory`):
+
+- [licenses/BSD-2-Clause.txt](licenses/BSD-2-Clause.txt)
 
 ## Contact
 
 - Support: support@opnory.com
+- Security: security@opnory.com
 - Privacy: privacy@opnory.com
 - Website: https://opnory.com
 
 ## Counsel Review Notes
 
 See each document for `[COUNSEL REVIEW REQUIRED]` and placeholder flags indicating business/legal decisions needed before final release.
-
-## Security
-
-- Vulnerability Disclosure Policy — [SECURITY.md](SECURITY.md)

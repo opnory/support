@@ -6,8 +6,6 @@
 
 Please do not report security vulnerabilities through public GitHub issues, discussions, social media, or other public channels.
 
-If `security@opnory.com` has not yet been configured, this is a deployment blocker — configure the alias before publishing this policy as operational.
-
 When submitting a report, please include:
 
 - Description of the vulnerability
@@ -233,11 +231,9 @@ Fixed response-time guarantees (e.g., "24-hour acknowledgment," "7-day critical 
 
 ## Attribution
 
-Researchers may request public acknowledgment after remediation. Attribution is optional. Opnory does not currently operate a bug bounty program.
+Researchers may request public acknowledgment after remediation. Attribution is optional.
 
-> **[BUG BOUNTY POLICY TO BE CONFIRMED]**
-
-No monetary rewards, swag, CVE assignment, or hall-of-fame placement are promised unless such programs are established.
+Opnory does not currently operate a bug bounty program.
 
 ---
 

@@ -9,7 +9,7 @@ Last Updated: August 17, 2026
 
 These Terms govern access to and use of Opnory Cloud, the hosted subscription edition of Opnory offered by Raell Dottin under the name Opnory.
 
-These Terms do **not** replace or restrict BSD-2-Clause rights covering the separately distributed Opnory Open Source software. The BSD-2-Clause `LICENSE` file is the authoritative license for Opnory Open Source code.
+These Terms do **not** replace or restrict BSD-2-Clause rights covering the separately distributed Opnory Open Source software. The authoritative BSD-2-Clause `LICENSE` file will be at the root of the Opnory source-code repository (`opnory/opnory`). A reference copy is available at `licenses/BSD-2-Clause.txt`.
 
 ---
 
