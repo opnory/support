@@ -6,9 +6,15 @@ This page serves as a navigation guide to Opnory's legal documents. It does not 
 
 ---
 
-## Opnory Open Source
+## Opnory Open Source (Self-Hosted)
 
-The open-source edition of Opnory is licensed under:
+The self-hosted, perpetual license edition of Opnory is governed by:
+
+**Opnory End User License Agreement**
+
+[View EULA.md](EULA.md)
+
+The open-source edition of Opnory source code is licensed under:
 
 **BSD-2-Clause**
 

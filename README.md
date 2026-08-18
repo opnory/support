@@ -11,7 +11,7 @@ This repository is the **canonical source** for Opnory legal, security, and supp
 | [PRIVACY.md](PRIVACY.md) | Privacy and data-processing practices | Draft for legal review |
 | [SECURITY.md](SECURITY.md) | Vulnerability disclosure policy | Operational |
 | [SUPPORT.md](SUPPORT.md) | Support channels and contact guide | Current |
-| [EULA.md](EULA.md) | Legacy EULA redirect | Retained for link compatibility |
+| [EULA.md](EULA.md) | End User License Agreement (self-hosted perpetual license) | Draft for legal review |
 
 > **CLOUD_TERMS.md and PRIVACY.md remain drafts for legal review. The BSD-2-Clause license is adopted (authoritative copy will be in `opnory/opnory`). SECURITY.md is the current vulnerability disclosure policy.**
 
@@ -29,11 +29,11 @@ The BSD-2-Clause `LICENSE` governs Opnory Open Source. `CLOUD_TERMS.md` governs 
 All documents are publicly accessible at their GitHub URLs:
 
 - Legal Navigation: `https://github.com/opnory/support/blob/main/LEGAL.md`
+- End User License Agreement: `https://github.com/opnory/support/blob/main/EULA.md`
 - Opnory Cloud Terms: `https://github.com/opnory/support/blob/main/CLOUD_TERMS.md`
 - Privacy Policy: `https://github.com/opnory/support/blob/main/PRIVACY.md`
 - Security Policy: `https://github.com/opnory/support/blob/main/SECURITY.md`
 - Support Guide: `https://github.com/opnory/support/blob/main/SUPPORT.md`
-- Legacy EULA Redirect: `https://github.com/opnory/support/blob/main/EULA.md`
 
 The Opnory website footer links to these canonical URLs.
 
