@@ -26,6 +26,7 @@ jobs:
         with:
           args: --offline --no-progress '**/*.md'
           fail: true
+          failIfEmpty: false
 
       - name: Whitespace check
         run: git diff --check
